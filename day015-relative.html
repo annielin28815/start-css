@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* ul 是為了消除掉 li 與 li 之間的距離，但會影響到其內容所有的文字字級，而 li 設定16是為了讓 li 內的文字回復到正常字級。 */
+    ul{
+      font-size: 0px;
+    }
+    li{
+      display: inline-block;
+      font-size: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: #aaa;
+      margin: 10px;
+      text-align: center;
+      line-height: 100px;
+    }
+    /* 偏移顯示 */
+    .item7{
+      font-size: 14px;
+      color: #000;
+      background-color: #f00;
+      opacity: 0.6;
+      position: relative;
+      left: 50px;
+      /* 如果要將前者的定位蓋過後者的話 */
+      z-index: 1;
+    }
+    /* 原始碼後者蓋過前者 */
+    .item8{
+      font-size: 14px;
+      background-color: #00f;
+      position: relative;
+    }
+
+  </style>
+</head>
+
+
+
+<body>
+  <ul>
+    <li class="item1">1</li>
+    <li class="item2">2</li>
+    <li class="item3">3</li>
+    <li class="item4">4</li>
+    <li class="item5">5</li>
+    <li class="item6">6</li>
+    <li class="item7">7偏移顯示</li>
+    <li class="item8">8偏移顯示</li>
+    <li class="item9">9</li>
+    <li class="item10">10</li>
+  </ul>
+</body>
+</html>
